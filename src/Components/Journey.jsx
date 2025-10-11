@@ -30,6 +30,13 @@ const Journey = () => {
         "Bringing fashion stories to life through styling and creative direction.",
       icon: <Sparkles className="w-6 h-6 text-white" />,
     },
+    {
+      title: "Assistant Designer",
+      company: "Pria Kataria Puri",
+      description:
+        "Honing design skills and creative vision working closely with established designers.",
+      icon: <Palette className="w-6 h-6 text-white" />,
+    },
   ];
 
   return (
