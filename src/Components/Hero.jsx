@@ -10,7 +10,8 @@ const Hero = () => {
       style={{ backgroundImage: `url(${heroImg})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#f9f4ef]/50 via-[#f9f4ef]/50 to-transparent"></div>
+
 
       {/* Decorative Animated Sparkles */}
       <div className="absolute inset-0 overflow-hidden">

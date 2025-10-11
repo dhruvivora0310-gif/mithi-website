@@ -25,7 +25,7 @@ const Navbar = () => {
             src={logo}
             alt="Mithi Logo"
             className={`object-contain transition-all duration-300 ${
-              scrolled ? "h-14 w-auto" : "h-20 w-auto"
+              scrolled ? "h-20 w-auto" : "h-23 w-auto"
             }`}
           />
         </div>
@@ -37,15 +37,21 @@ const Navbar = () => {
           }`}
         >
           {["Home", "About", "Journey", "Contact"].map((item) => (
-            <li key={item}>
+            <li key={item} className="relative group">
               <a
                 href={`#${item.toLowerCase()}`}
-                className="relative transition-colors duration-300 hover:text-[#B82025]"
+                className="relative px-3 py-1 transition-all duration-300 group-hover:text-[#B82025]"
               >
-                {item}
+                {/* Hover beige background */}
+                <span className="absolute inset-0 rounded-full bg-[#f6e8db] opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
+
+                {/* Text */}
+                <span className="relative z-10">{item}</span>
               </a>
             </li>
           ))}
+
+          {/* Get in Touch Button */}
           <li>
             <a
               href="#contact"
@@ -76,13 +82,18 @@ const Navbar = () => {
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="block transition-all duration-300 hover:text-[#B82025]"
+                className="block relative px-3 py-1 transition-all duration-300 hover:text-[#B82025]"
                 onClick={() => setMenuOpen(false)}
               >
-                {item}
+                {/* Beige hover background */}
+                <span className="absolute inset-0 rounded-full bg-[#f6e8db] opacity-0 hover:opacity-100 transition-all duration-300"></span>
+                <span className="relative z-10">{item}</span>
+                {/* Gradient underline */}
+                <span className="absolute left-0 bottom-0 w-0 h-[3px] rounded-full bg-gradient-to-r from-[#B82025] to-[#F29C38] transition-all duration-300 hover:w-full"></span>
               </a>
             </li>
           ))}
+
           <li>
             <a
               href="#contact"
