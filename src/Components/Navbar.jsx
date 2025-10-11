@@ -1,38 +1,38 @@
 import React, { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import logo from "../assets/mithi-logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 md:px-12 transition-all duration-500">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
         {/* Logo */}
-        <div className="flex-shrink-0 transition-all duration-500">
+        <div className="flex-shrink-0 transition-all duration-300">
           <img
             src={logo}
             alt="Mithi Logo"
-            className={`object-contain transition-all duration-500 ${
-              scrolled ? "h-14 md:h-15" : "h-30 md:h-30"
+            className={`object-contain transition-all duration-300 ${
+              scrolled ? "h-14 w-auto" : "h-20 w-auto"
             }`}
           />
         </div>
 
-        {/* Navigation Links */}
+        {/* Desktop Nav Links */}
         <ul
-          className={`flex items-center gap-10 text-lg font-medium transition-all duration-500 ${
+          className={`hidden md:flex items-center gap-10 text-lg font-medium ${
             scrolled ? "text-gray-700" : "text-black"
           }`}
         >
@@ -40,18 +40,54 @@ const Navbar = () => {
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="nav-link relative transition-colors duration-300"
+                className="relative transition-colors duration-300 hover:text-[#B82025]"
               >
                 {item}
               </a>
             </li>
           ))}
-
-          {/* Get in Touch Button */}
           <li>
             <a
               href="#contact"
-              className="ml-2 bg-[#B82025] hover:bg-[#a61a21] text-white px-8 py-2 rounded-full font-semibold shadow-md transition-all duration-300"
+              className="ml-2 bg-[#B82025] hover:bg-[#a61a21] text-white px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-300"
+            >
+              Get in Touch
+            </a>
+          </li>
+        </ul>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-gray-800 focus:outline-none"
+        >
+          {menuOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu with Animation */}
+      <div
+        className={`md:hidden bg-white shadow-lg absolute top-full left-0 w-full overflow-hidden transition-all duration-500 ease-in-out ${
+          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-6 py-6 text-lg font-medium text-gray-800">
+          {["Home", "About", "Journey", "Contact"].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="block transition-all duration-300 hover:text-[#B82025]"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              href="#contact"
+              className="bg-[#B82025] hover:bg-[#a61a21] text-white px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-300"
+              onClick={() => setMenuOpen(false)}
             >
               Get in Touch
             </a>

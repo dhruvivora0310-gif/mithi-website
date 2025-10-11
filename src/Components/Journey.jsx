@@ -30,7 +30,7 @@ const Journey = () => {
         "Bringing fashion stories to life through styling and creative direction.",
       icon: <Sparkles className="w-6 h-6 text-white" />,
     },
-    {
+     {
       title: "Assistant Designer",
       company: "Pria Kataria Puri",
       description:
@@ -42,7 +42,7 @@ const Journey = () => {
   return (
     <section
       id="journey"
-      className="relative bg-[#fdfdfd] py-20 px-10 md:px-12 flex-col items-center"
+      className="relative bg-[#fdfdfd] py-20 px-6 md:px-12 flex flex-col items-center"
     >
       {/* Title */}
       <div data-aos="fade-up" className="text-center mb-14">
@@ -60,23 +60,23 @@ const Journey = () => {
 
       {/* Timeline */}
       <div className="relative max-w-7xl mx-auto">
-        {/* Center line */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#F29C38] to-[#B82025] transform -translate-x-1/2"></div>
+        {/* Center line - hidden on mobile */}
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#F29C38] to-[#B82025] transform -translate-x-1/2"></div>
 
-        {/* Reduced vertical spacing */}
-        <div className="space-y-30 md:space-y-30">
+        {/* Content Cards */}
+        <div className="space-y-20 md:space-y-28">
           {milestones.map((item, index) => (
             <div
               key={index}
               data-aos="fade-up"
-              className={`flex items-center justify-between w-full ${
-                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+              className={`flex flex-col md:flex-row items-center justify-between w-full ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
               {/* Content Card */}
               <div
-                className={`bg-white shadow-md rounded-2xl p-10 md:p-15 w-full md:w-[55%] ${
-                  index % 2 === 0 ? "text-right" : "text-left"
+                className={`bg-white shadow-md rounded-2xl p-10 w-full md:w-[55%] ${
+                  index % 2 === 0 ? "text-right md:text-right" : "text-left md:text-left"
                 }`}
                 style={{
                   fontFamily: "'Baskervville', serif",
@@ -101,8 +101,8 @@ const Journey = () => {
                 </p>
               </div>
 
-              {/* Icon Connector */}
-              <div className="relative flex justify-center items-center w-20">
+              {/* Icon (hidden on mobile) */}
+              <div className="hidden md:flex relative justify-center items-center w-20">
                 <div
                   className={`absolute w-14 h-14 rounded-full bg-gradient-to-br from-[#F29C38] to-[#B82025] flex items-center justify-center shadow-lg ${
                     index % 2 === 0 ? "translate-x-4" : "-translate-x-4"
@@ -112,8 +112,8 @@ const Journey = () => {
                 </div>
               </div>
 
-              {/* Empty side for alignment */}
-              <div className="hidden md:block w-[60%]"></div>
+              {/* Empty space for alignment (desktop only) */}
+              <div className="hidden md:block w-[63%]"></div>
             </div>
           ))}
         </div>
