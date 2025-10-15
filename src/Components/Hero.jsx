@@ -6,13 +6,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full bg-cover bg-center flex flex-col items-center justify-center text-center"
+      className="relative h-screen w-full bg-cover bg-center md:bg-cover md:bg-center 
+        bg-no-repeat flex flex-col items-center justify-center text-center"
       style={{ backgroundImage: `url(${heroImg})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#f9f4ef]/50 via-[#f9f4ef]/50 to-transparent"></div>
-
-
       {/* Decorative Animated Sparkles */}
       <div className="absolute inset-0 overflow-hidden">
         <span className="absolute text-2xl animate-twinkle top-1/2 left-[42%]">✨</span>
@@ -26,7 +25,7 @@ const Hero = () => {
         <p className="text-darkblue uppercase tracking-[3px] text-sm md:text-base font-semibold mb-4">
           Fashion Designer
         </p>
-        <h1 className="text-10xl md:text-8xl text-black leading-none mb-6 font-semibold"
+        <h1 className="relative text-10xl md:text-8xl text-black leading-none mb-6 font-semibold"
         style={{
           fontFamily: "'Playfair', serif",
         }}>
@@ -41,8 +40,10 @@ const Hero = () => {
           Where fashion becomes an expression of personality and confidence
         </p>
 
-        <button className="mt-10 bg-[#B82025] hover:bg-[#a61a21] text-white px-8 py-3 rounded-full shadow-md text-lg font-semibold transition-all">
+        <button className="mt-10 bg-[#B82025] hover:bg-[#a61a21] text-white px-10 py-3 rounded-full shadow-md text-lg font-semibold transition-all">
+          <a href="#journey">
           Discover the Journey
+          </a>
         </button>
       </div>
     </section>

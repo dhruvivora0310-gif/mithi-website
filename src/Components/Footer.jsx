@@ -22,7 +22,7 @@ const Footer = () => {
       <p className="text-gray-700 text-base">
         © {new Date().getFullYear()}{" "}
           Mithi by Jansi Vora.
-        . All rights reserved.
+          All rights reserved.
       </p>
 
       {/* Tagline */}

@@ -55,7 +55,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="ml-2 bg-[#B82025] hover:bg-[#a61a21] text-white px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-300"
+              className="ml-2 bg-[#B82025] hover:bg-[#a61a21] text-white px-10 py-3 rounded-full font-semibold shadow-md transition-all duration-300"
             >
               Get in Touch
             </a>
