@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-24 px-6 md:px-12 text-center flex flex-col items-center justify-center"
+      className="relative py-24 px-6 md:px-12 text-center  flex-col items-center justify-center"
       style={{
         backgroundColor: "#f7eee7", // soft beige color
       }}

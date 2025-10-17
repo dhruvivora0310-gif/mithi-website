@@ -12,6 +12,7 @@ const Hero = () => {
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#f9f4ef]/50 via-[#f9f4ef]/50 to-transparent"></div>
+      <div className="absolute inset-0 block md:hidden bg-gradient-to-b from-[#5c1e1e]/80 via-[#f7eee7]/20 to-transparent"></div>
       {/* Decorative Animated Sparkles */}
       <div className="absolute inset-0 overflow-hidden">
         <span className="absolute text-2xl animate-twinkle top-1/2 left-[42%]">✨</span>
@@ -25,12 +26,16 @@ const Hero = () => {
         <p className="text-darkblue uppercase tracking-[3px] text-sm md:text-base font-semibold mb-4">
           Fashion Designer
         </p>
-        <h1 className="relative text-10xl md:text-8xl text-black leading-none mb-6 font-semibold"
-        style={{
-          fontFamily: "'Playfair', serif",
-        }}>
-          Mithi
-        </h1>
+        <h1
+  className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[5rem] font-semibold text-black leading-tight mb-6"
+  style={{
+    fontFamily: "'Baskervville', serif",
+    letterSpacing: "3px",
+  }}
+>
+  Mithi
+</h1>
+
         <h2 className="text-3xl md:text-5xl font-serif mb-10">
           <span className="text-[#B82025]">Timeless Elegance,</span>
           <br />
