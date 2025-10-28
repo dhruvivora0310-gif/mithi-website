@@ -56,7 +56,9 @@ const Contact = () => {
       {/* Button */}
       <div data-aos="zoom-in" className="mb-10">
         <a
-          href="mailto:info@mithibyjansivora.com"
+          href="mailto:info@mithibyjansivora.com?subject=Inquiry%20from%20Website&body=Hi%20Mithi%2C%0A%0AI%20would%20like%20to%20get%20in%20touch%20regarding..."
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-[#B82025] hover:bg-[#a61a21] text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 text-lg"
           style={{
             fontFamily: "'Poppins', sans-serif",
