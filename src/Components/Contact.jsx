@@ -54,20 +54,37 @@ const Contact = () => {
       </p>
 
       {/* Button */}
-      <div data-aos="zoom-in" className="mb-10">
-        <a
-          href="mailto:info@mithibyjansivora.com?subject=Inquiry%20from%20Website&body=Hi%20Mithi%2C%0A%0AI%20would%20like%20to%20get%20in%20touch%20regarding..."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-[#B82025] hover:bg-[#a61a21] text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 text-lg"
-          style={{
-            fontFamily: "'Poppins', sans-serif",
-          }}
-        >
-          <Mail className="w-7 h-5" />
-          Get in Touch
-        </a>
-      </div>
+<div data-aos="zoom-in" className="mb-10">
+  <button
+    onClick={() => {
+      const email = "info@mithibyjansivora.com";
+      const subject = "Inquiry from Website";
+      const body = "Hi Mithi,\n\nI would like to get in touch regarding...";
+      const mailtoLink = `mailto:${email}?body=${encodeURIComponent(body)}`;
+
+      // Try to open the default mail client first
+      const opened = window.open(mailtoLink);
+
+      // If popup blocked or no default mail app, open Gmail
+      setTimeout(() => {
+        if (!opened || opened.closed || typeof opened.closed === "undefined") {
+          const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+            subject
+          )}&body=${encodeURIComponent(body)}`;
+          window.open(gmailLink, "_blank");
+        }
+      }, 500);
+    }}
+    className="inline-flex items-center gap-3 bg-[#B82025] hover:bg-[#a61a21] text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 text-lg"
+    style={{
+      fontFamily: "'Poppins', sans-serif",
+    }}
+  >
+    <Mail className="w-7 h-5" />
+    Get in Touch
+  </button>
+</div>
+
 
       {/* Social Icons */}
       <div data-aos="fade-up" data-aos-delay="300" className="flex gap-6 justify-center">
