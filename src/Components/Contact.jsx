@@ -60,20 +60,23 @@ const Contact = () => {
       const email = "info@mithibyjansivora.com";
       const subject = "Inquiry from Website";
       const body = "Hi Mithi,\n\nI would like to get in touch regarding...";
-      const mailtoLink = `mailto:${email}?body=${encodeURIComponent(body)}`;
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
 
-      // Try to open the default mail client first
-      const opened = window.open(mailtoLink);
+      // Detect if the user is on mobile
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-      // If popup blocked or no default mail app, open Gmail
-      setTimeout(() => {
-        if (!opened || opened.closed || typeof opened.closed === "undefined") {
-          const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
-            subject
-          )}&body=${encodeURIComponent(body)}`;
-          window.open(gmailLink, "_blank");
-        }
-      }, 500);
+      if (isMobile) {
+        // Open native email app on phones
+        window.location.href = mailtoLink;
+      } else {
+        // Open Gmail compose in the same tab on desktop
+        window.location.href = gmailLink;
+      }
     }}
     className="inline-flex items-center gap-3 bg-[#B82025] hover:bg-[#a61a21] text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 text-lg"
     style={{
@@ -84,6 +87,7 @@ const Contact = () => {
     Get in Touch
   </button>
 </div>
+
 
 
       {/* Social Icons */}
