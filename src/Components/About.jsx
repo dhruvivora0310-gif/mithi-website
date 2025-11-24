@@ -53,9 +53,10 @@ const About = () => {
             color: "black",
             fontWeight:"bold",
             }}>
-            I&apos;m{" "} <span className=" text-[#B82025]">Jansi Vora</span>, the founder of{" "}
-            <span className="text-[#B82025]">Mithi</span> – a brand born from
-            my passion for fashion, creativity, and storytelling through design.
+              I&apos;m <span className="text-[#B82025]">Jansi Vora</span>, the founder
+  and creative mind behind <span className="text-[#B82025]">Mithi</span> — a
+  label born from my deep passion for fashion, craftsmanship, and
+  storytelling through design.
             </p>
 
           <p className="text-600 mb-6"
