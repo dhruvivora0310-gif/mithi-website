@@ -48,57 +48,68 @@ const About = () => {
           }}
         >
           <p className="text-gray-800 mb-6" style={{
-            fontSize: "1.4rem",
+            fontSize: "1.2rem",
             lineHeight: "1.9",
             color: "black",
             fontWeight:"bold",
             }}>
               I&apos;m <span className="text-[#B82025]">Jansi Vora</span>, the founder
-  and creative mind behind <span className="text-[#B82025]">Mithi</span> — a
-  label born from my deep passion for fashion, craftsmanship, and
-  storytelling through design.
+              and creative mind behind <span className="text-[#B82025]">Mithi</span> — a
+              label born from my deep passion for fashion, craftsmanship, and
+              storytelling through design.
             </p>
 
           <p className="text-600 mb-6"
           style={{
-            fontSize: "1.2rem",
+            fontSize: "1rem",
             lineHeight: "1.9",
             }}>
-            My journey in the fashion industry has given me the privilege of
-            working with some of the most respected names in the field. I began
-            my career contributing to Reliance&apos;s iconic project{" "}
-            <span className="font-semibold">India in Fashion</span>,
-            followed by working closely as an Assistant Designer with{" "}
-            <span className="font-semibold">Pria Kataria Puri</span>, and later
-            as an Assistant Stylist at{" "}
-            <span className="font-semibold">Nykaa Fashion</span>.
+            My journey in the fashion industry has allowed me to work with some of the
+            most respected names in India. I began my career contributing to
+            Reliance&apos;s iconic project{" "}
+            <span className="font-semibold">India in Fashion</span>, an experience
+            that refined my understanding of India&apos;s rich textile heritage and
+            global couture standards.
           </p>
 
           <p className="text-black-600 mb-6"
           style={{
-            fontSize: "1.2rem",
+            fontSize: "1rem",
             lineHeight: "1.9",
             }}>
-            Each of these experiences shaped my vision and strengthened my
-            commitment to creating timeless yet contemporary pieces under the
-            label{" "}
-            <span className="font-semibold text-[#B82025]">
-              Mithi
-            </span>
+            I later worked as an Assistant Designer with{" "}
+            <span className="font-semibold">Pria Kataria Puri</span>, where I learned
+            the art of luxury fashion, silhouette construction, and glamorous couture
+            detailing. My path then led me to{" "}
+            <span className="font-semibold">Nykaa Fashion</span>, where I served as an
+            Assistant Stylist, gaining hands-on experience in editorial styling,
+            contemporary fashion trends, and visual storytelling.
             .
           </p>
 
-          <p className="text-black-1000"
+          <p className="text-black-1000 mb-6"
           style={{
-            fontSize: "1.2rem",
+            fontSize: "1rem",
             lineHeight: "1.9",
             }}>
-            At{" "}
-            <span className="font-semibold text-[#B82025]">Mithi</span>,
-            my goal is to blend elegance with individuality, offering designs
-            that are not just garments but expressions of personality and
-            confidence.
+            These experiences shaped my vision and strengthened my dedication to
+            creating designs that feel both timeless and modern — pieces that blend
+            sophistication with emotion.
           </p>
+
+        <p
+          className="text-black-1000"
+          style={{
+            fontSize: "1rem",
+            lineHeight: "1.9",
+          }}
+        >
+          At <span className="font-semibold text-[#B82025]">Mithi</span>, my goal is
+          to craft clothing that celebrates elegance, individuality, and confidence —
+          designs that don&apos;t just adorn the body but express one&apos;s
+          identity. Mithi is more than a fashion label — it&apos;s a space where
+          creativity meets emotion, and every design becomes a personal story.
+        </p>
         </div>
       </div>
     </section>
