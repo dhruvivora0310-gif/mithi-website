@@ -48,7 +48,7 @@ const About = () => {
           }}
         >
           <p className="text-gray-800 mb-6" style={{
-            fontSize: "1.2rem",
+            fontSize: "1.4rem",
             lineHeight: "1.9",
             color: "black",
             fontWeight:"bold",
@@ -61,7 +61,7 @@ const About = () => {
 
           <p className="text-600 mb-6"
           style={{
-            fontSize: "1rem",
+            fontSize: "1.2rem",
             lineHeight: "1.9",
             }}>
             My journey in the fashion industry has allowed me to work with some of the
@@ -74,7 +74,7 @@ const About = () => {
 
           <p className="text-black-600 mb-6"
           style={{
-            fontSize: "1rem",
+            fontSize: "1.2rem",
             lineHeight: "1.9",
             }}>
             I later worked as an Assistant Designer with{" "}
@@ -84,12 +84,11 @@ const About = () => {
             <span className="font-semibold">Nykaa Fashion</span>, where I served as an
             Assistant Stylist, gaining hands-on experience in editorial styling,
             contemporary fashion trends, and visual storytelling.
-            .
           </p>
 
           <p className="text-black-1000 mb-6"
           style={{
-            fontSize: "1rem",
+            fontSize: "1.2rem",
             lineHeight: "1.9",
             }}>
             These experiences shaped my vision and strengthened my dedication to
@@ -100,7 +99,7 @@ const About = () => {
         <p
           className="text-black-1000"
           style={{
-            fontSize: "1rem",
+            fontSize: "1.2rem",
             lineHeight: "1.9",
           }}
         >
