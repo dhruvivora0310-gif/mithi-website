@@ -15,7 +15,7 @@ function App() {
       <Hero />
       <About />
       <Journey />
-      <Collection />
+      {/* <Collection /> */}
       <Contact />
       <Footer />
     </>
