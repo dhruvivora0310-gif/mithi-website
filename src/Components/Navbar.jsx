@@ -14,11 +14,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-12">
         {/* Logo */}
         <div className="flex-shrink-0 transition-all duration-300">
           <img
@@ -36,7 +36,7 @@ const Navbar = () => {
             scrolled ? "text-gray-700" : "text-black"
           }`}
         >
-          {["Home", "About", "Journey", "Contact"].map((item) => (
+          {["Home", "About", "Journey","Our Collection", "Contact"].map((item) => (
             <li key={item} className="relative group">
               <a
                 href={`#${item.toLowerCase()}`}
@@ -78,7 +78,7 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col items-center gap-6 py-6 text-lg font-medium text-gray-800">
-          {["Home", "About", "Journey", "Contact"].map((item) => (
+          {["Home", "About", "Journey","Our Collection", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}

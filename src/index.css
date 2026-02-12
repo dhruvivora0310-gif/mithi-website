@@ -64,3 +64,11 @@
 @media (max-width: 640px) {
   .nav-link::after { bottom: -5px; height: 2px; }
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
