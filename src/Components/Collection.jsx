@@ -25,13 +25,24 @@ export default function Collections() {
   const [showRight, setShowRight] = useState(true);
 
   const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -600 : 600,
-        behavior: "smooth",
-      });
-    }
-  };
+  if (!scrollRef.current) return;
+
+  const container = scrollRef.current;
+  const card = container.children[0];
+
+  if (!card) return;
+
+  // Get gap dynamically
+  const styles = window.getComputedStyle(container);
+  const gap = parseInt(styles.columnGap || styles.gap || 0);
+
+  const scrollAmount = card.offsetWidth + gap;
+
+  container.scrollBy({
+    left: direction === "left" ? -scrollAmount : scrollAmount,
+    behavior: "smooth",
+  });
+};
 
   const handleScroll = () => {
     const container = scrollRef.current;
