@@ -2,19 +2,18 @@ import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const images = [
-  "/Images/look1.png",
-  "/Images/look2.jpg",
-  "/Images/look3.jpg",
-  "/Images/look4.jpg",
-  "/Images/look5.jpg",
-  "/Images/look6.jpg",
-  "/Images/look7.jpg",
-  "/Images/look8.jpg",
-  "/Images/look9.jpg",
-  "/Images/look10.png",
-  "/Images/look11.png",
-  "/Images/look12.png",
-  "/Images/look13.png",
+  "/Images/Look 1.png",
+  "/Images/Look 2.png",
+  "/Images/Look 3.png",
+  "/Images/Look 4.png",
+  "/Images/Look 5.png",
+  "/Images/Look 6.png",
+  "/Images/Look 7.jpg",
+  "/Images/Look 8.png",
+  "/Images/Look 9.png",
+  "/Images/Look 10.jpg",
+  "/Images/Look 11.jpg",
+  "/Images/Look 12.jpg",
 ];
 
 export default function Collections() {
@@ -91,7 +90,7 @@ export default function Collections() {
         {/* Title */}
         <div className="text-center mb-14">
           <h2
-            className="text-5xl md:text-6xl font-bold"
+            className="text-5xl md:text-5xl font-bold"
             style={{
               fontFamily: "'Baskervville', serif",
               color: "#1f1f1f",
